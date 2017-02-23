@@ -11,6 +11,7 @@
   <link rel="apple-touch-icon-precomposed" href="{{ URL::asset('favicon.ico') }}" />
   <link href="{{ URL::asset('css/materialize.min.css') }}" type="text/css" rel="stylesheet" media="screen,projection" />
   <link href="{{ URL::asset('css/styles.css') }}" type="text/css" rel="stylesheet" media="screen,projection" />
+
   @yield('head')
 </head>
 
