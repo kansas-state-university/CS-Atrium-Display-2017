@@ -16,11 +16,13 @@
 
 <body>
 
+
 @yield('content')
 
 <script src="{{ URL::asset('js/jquery.min.js') }}"></script>
 <script src="{{ URL::asset('js/materialize.min.js') }}"></script>
-<script src="{{ URL::asset('js/styles.js') }}"></script>
+<script src="{{ URL::asset('js/particles.js') }}"></script>
+<script src="js/app.js"></script>
 @yield('footer')
 </body>
 

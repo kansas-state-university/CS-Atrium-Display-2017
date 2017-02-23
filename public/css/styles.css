@@ -1,0 +1,64 @@
+body {
+    background-color: #5a2b81;
+}
+
+section.cover .logo {
+  position: relative;
+  width: 350px;
+  height: auto;
+}
+
+h3.brand {
+  color: #d8d8d8;
+}
+
+.btn-teal {
+  border-color: #5fc6c1;
+  color: #5fc6c1 !important;
+}
+
+.btn-teal:hover {
+  background-color: #5fc6c1 !important;
+  color: white !important;
+}
+
+
+
+
+.buttons {
+  margin-top: 10px;
+}
+
+.btn {
+  border-radius: 5px;
+  /*margin: 10px auto;*/
+}
+
+.btn-filled {
+  background-color: #8da1cd;
+}
+
+
+.v-align {
+  position: relative !important;
+  transform: translate3d(0, -50%, 0) !important;
+  -webkit-transform: translate3d(0, -50%, 0) !important;
+  top: 50% !important;
+  z-index: 2 !important;
+}
+
+
+#particles-js{
+  width: 100%;
+  background-position: 50% 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 999;
+  background-color: #5a2b81;
+}
+
+.main-content {
+  z-index: 999 !important;
+}
