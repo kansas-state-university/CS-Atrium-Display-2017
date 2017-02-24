@@ -18,7 +18,7 @@ class Controller extends BaseController
     public function AddUser($request = null)
     {
       $users = \DB::table('users')->get();
-      return view('index', compact('users'))->with("success", "Added user!");
+      return view('index', compact('users'))->with('success', 'Added user!');
     }
 
 
