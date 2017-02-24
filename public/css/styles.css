@@ -4,6 +4,12 @@ body {
 
 h3.brand {
   color: #d8d8d8;
+  font-family: "Myriad Pro Bold";
+  font-size: 40pt;
+}
+
+.name-box {
+  color: #ffffff;
 }
 
 .btn-filled:hover {

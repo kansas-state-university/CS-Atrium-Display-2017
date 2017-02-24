@@ -9,5 +9,17 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
 class Controller extends BaseController
 {
-    use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+    public function FrontPage()
+    {
+      $users = \DB::table('users')->get();
+      return view('index', compact('users'));
+    }
+
+    public function AddUser($request = null)
+    {
+      $users = \DB::table('users')->get();
+      return view('index', compact('users'))->with("success", "Added user!");
+    }
+
+
 }

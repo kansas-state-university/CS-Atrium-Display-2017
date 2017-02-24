@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', 'Controller@FrontPage');
+
+Route::post('/add', 'Controller@AddUser');
