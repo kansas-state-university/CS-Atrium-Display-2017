@@ -30,7 +30,15 @@ class Controller extends BaseController
 
     public function Youtube()
     {
-      return view('youtube');
+      $users = User::orderBy('id', 'desc')->limit(10)->get();
+
+      $string = "";
+      foreach($users as $user) {
+        $string .= $user->name;
+        $string .= ":";
+      }
+
+      return view('youtube', compact('string'));
     }
 
 
