@@ -6,6 +6,8 @@ body {
     font: normal 16px/20px 'Lekton', sans-serif;
     background-color: #5a2b81;
     background: url('/img/background.jpg');
+    background-size: contain;
+    background-attachment: fixed;
 }
 
 h1 {
@@ -192,4 +194,10 @@ animation-duration:2s;
         margin-left: 0%;
         font-size: 40px;
     }
+
+    body {
+      background: url('/img/mobileback.png');
+      background-size: cover;
+    }
+
 }
