@@ -26,7 +26,7 @@
 
 <div class="container">
   <div class="row text-center">
-    <div class="col-lg-4 col-lg-offset-4 col-xs-4 col-xs-offset-0 col-sm-4 col-sm-offset-2 col-md-6 col-md-offset-3">
+    <div class="col-lg-4 col-lg-offset-4 col-sm-4 col-sm-offset-2 col-md-6 col-md-offset-3">
     <form method="POST" action="{{ url('/add') }}">
       <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <input type="text" name="name" class="form-control name-box" placeholder="Enter your name" autofocus>
