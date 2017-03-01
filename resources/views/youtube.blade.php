@@ -28,9 +28,7 @@
   <div class="row text-center">
     <div class="col-lg-4 col-lg-offset-4">
     <form method="POST" action="{{ url('/add') }}">
-
       <input type="hidden" name="_token" value="{{ csrf_token() }}">
-
         <input type="text" name="name" class="form-control name-box" placeholder="Enter your name" autofocus>
       <div class="row text-center buttons">
         <button class="btn btn-lg btn-filled btn-primary" id="register" disabled="disabled" type="submit">Submit</button>

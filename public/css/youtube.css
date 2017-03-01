@@ -28,6 +28,7 @@ h2, h1 {
 
 .name-box {
   color: #ffffff !important;
+
   width: 365px !important;
   border: 0;
   background: transparent !important;
@@ -96,3 +97,8 @@ button {
 }
 
 button:focus {outline:none;}
+
+.form-control::-webkit-input-placeholder { color: white !important; }
+.form-control:-moz-placeholder { color: white !important; }
+.form-control::-moz-placeholder { color: white !important; }
+.form-control:-ms-input-placeholder { color: white !important; }
