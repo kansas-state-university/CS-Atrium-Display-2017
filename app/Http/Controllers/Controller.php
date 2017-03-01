@@ -8,21 +8,26 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use App\User;
+use App\Blacklist;
 
 class Controller extends BaseController
 {
-    
+
 
     public function AddUser(Request $request)
     {
-      if($request == null) {
-        //return redirect()->action("Controller@FrontPage")->withErrors('Unable to add user!');
+        $search = strtolower($request->name);
+        $invalid = Blacklist::where('name', $search)->first();
+        if($invalid == null) {
+          User::insert(
+            ['name' => $request->name]
+          );
+          return redirect()->action("Controller@Youtube")->with('success', 'Added user!');
+        }
+        return redirect()->action("Controller@Youtube")->withErrors('Invalid name!');
       }
-      User::insert(
-        ['name' => $request->name]
-      );
-      return redirect()->action("Controller@Youtube")->with('success', 'Added user!');
-    }
+
+
 
     public function Youtube()
     {
