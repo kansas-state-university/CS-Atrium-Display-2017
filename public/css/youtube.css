@@ -8,25 +8,78 @@ body {
     background: url('/img/background.jpg');
 }
 
+h1 {
+  font-weight: 300 !important;
+}
+
+h2 {
+  font-weight: 410 !important;
+}
+
 h2, h1 {
-  color: white;
-  font-size: 60px;
-  font-weight: 400;
+  color: white !important;
+  font-size: 60px !important;
 }
 
 .titles {
   text-align: center;
-  margin-top: 10%;
+  margin-top: 8%;
+}
+
+.name-box {
+  color: #ffffff !important;
+  width: 365px !important;
+  border: 0;
+  background: transparent !important;
+  height:50px !important;
+  font-size:20pt !important;
+}
+
+.form-control:focus {
+  box-shadow: 0 2px 0 0 #dbd9e2 !important
+  border-bottom-color: transparent !important;
+
 
 }
 
+.btn-filled:hover:enabled {
+  background-color: #7b5499 !important;
+  color: white !important;
+}
+
+.buttons {
+  margin-top: 10px;
+}
+
+.btn {
+  border-radius: 7px;
+  margin-top: 10px;
+  width: 150px;
+  /*margin: 10px auto;*/
+}
+
+.btn-filled {
+  background-color: #8da1cd !important;
+
+}
+
+
+.drawing-title {
+  text-align: left;
+  margin-left: 29%;
+  margin-top: 10%;
+  font-size: 60px;
+  color: white;
+  font-weight: 300;
+}
 
 .typer-title {
   text-align: left;
-  margin-left: 375px;
+  margin-left: 29%;
   font-size: 60px;
   color: white;
 }
+
 
 
 button {

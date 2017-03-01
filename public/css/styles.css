@@ -13,12 +13,14 @@ h3.brand {
 }
 
 
+
+
 .form-control:focus {
   border-bottom-color: #dbd9e2 !important;
   box-shadow: 0 1px 0 0 #dbd9e2 !important
 }
 
-.btn-filled:hover {
+.btn-filled:hover:enabled {
   background-color: #7b5499 !important;
   color: white !important;
 }

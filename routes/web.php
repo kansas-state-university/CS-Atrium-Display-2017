@@ -11,7 +11,5 @@
 |
 */
 
-Route::get('/', 'Controller@FrontPage');
-Route::get('/youtube', 'Controller@Youtube');
-
+Route::get('/', 'Controller@Youtube');
 Route::post('/add', 'Controller@AddUser');

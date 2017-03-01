@@ -11,11 +11,7 @@ use App\User;
 
 class Controller extends BaseController
 {
-    public function FrontPage()
-    {
-      $users = User::get();
-      return view('index', compact('users'));
-    }
+    
 
     public function AddUser(Request $request)
     {
@@ -25,7 +21,7 @@ class Controller extends BaseController
       User::insert(
         ['name' => $request->name]
       );
-      return redirect()->action("Controller@FrontPage")->with('success', 'Added user!');
+      return redirect()->action("Controller@Youtube")->with('success', 'Added user!');
     }
 
     public function Youtube()
