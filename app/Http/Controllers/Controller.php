@@ -2,23 +2,35 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use App\User;
 
 class Controller extends BaseController
 {
     public function FrontPage()
     {
-      $users = \DB::table('users')->get();
+      $users = User::get();
       return view('index', compact('users'));
     }
 
-    public function AddUser($request = null)
+    public function AddUser(Request $request)
     {
-      $users = \DB::table('users')->get();
-      return view('index', compact('users'))->with('success', 'Added user!');
+      if($request == null) {
+        //return redirect()->action("Controller@FrontPage")->withErrors('Unable to add user!');
+      }
+      User::insert(
+        ['name' => $request->name]
+      );
+      return redirect()->action("Controller@FrontPage")->with('success', 'Added user!');
+    }
+
+    public function Youtube()
+    {
+      return view('youtube');
     }
 
 

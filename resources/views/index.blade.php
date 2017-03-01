@@ -1,16 +1,14 @@
 @extends('layouts.main')
 @section('title', 'Home')
 
+@section('head')
+<link href="{{ URL::asset('css/jquery.mb.YTPlayer.min.css') }}" media="all" rel="stylesheet" type="text/css">
+@endsection
+
 @section('content')
 
-@if(Session::has('success'))
-    <div class="alert alert-success" role="alert">
-      <strong>Success!</strong> {{ Session::get('success') }}
-    </div>
-  @endif
-
 <div class="main-container">
-  <section class="cover fullscreen parallax overlay image-bg">
+  <section class="parallax">
     <div id="particles-js"></div>
     <div class="container v-align main-content">
       <div class="row text-center">
@@ -26,12 +24,13 @@
           </div>
         </form>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 
 @endsection
 
 @section('footer')
+
 <script>
 (function() {
     $('form > input').keyup(function() {

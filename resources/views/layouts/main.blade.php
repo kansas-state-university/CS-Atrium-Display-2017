@@ -11,6 +11,7 @@
   <link rel="apple-touch-icon-precomposed" href="{{ URL::asset('favicon.ico') }}" />
   <link href="{{ URL::asset('css/materialize.min.css') }}" type="text/css" rel="stylesheet" media="screen,projection" />
   <link href="{{ URL::asset('css/styles.css') }}" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="{{ URL::asset('css/jquery.mb.YTPlayer.min.css') }}" type="text/css" rel="stylesheet" media="all" />
 
   @yield('head')
 </head>
@@ -23,6 +24,7 @@
 <script src="{{ URL::asset('js/jquery.min.js') }}"></script>
 <script src="{{ URL::asset('js/materialize.min.js') }}"></script>
 <script src="{{ URL::asset('js/particles.js') }}"></script>
+<script src="{{ URL::asset('js/jquery.mb.YTPlayer.js') }}"></script>
 <script src="js/app.js"></script>
 @yield('footer')
 </body>
