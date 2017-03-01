@@ -8,24 +8,15 @@
 @endsection
 
 @section('content')
-
-
-<body>
-<div id="wrapper">
-  <div id="customElement">
-      <div id="testText">
-          <h1>Kansas State University</h1>
-          <h2>Computer Science Department
-      </div>
+<header>
+  <div id="bgndVideo" class="player" data-property="{videoURL:'https://youtu.be/J4peLBZ6ZCI',containment:'header',autoPlay:true, loop:true, mute:true, showControls:false, quality:'hd1080'}"></div>
+  <div>
+    <div>
+      <h1>Kansas State University</h1>
+      <h2>Computer Science Department</h2>
+    </div>
   </div>
-</div>
-
-<div id="video" class="player" data-property="{videoURL:'https://youtu.be/J4peLBZ6ZCI',containment:'#customElement', showControls:false, autoPlay:true, loop:true, mute:true, startAt:0, opacity:1, addRaster:true, quality:'hd1080'}"></div> <!--BsekcY04xvQ-->
-
-
-
-
-@endsection
+</header>
 
 @section('footer')
 <script src="{{ URL::asset('js/jquery.min.js') }}"></script>
