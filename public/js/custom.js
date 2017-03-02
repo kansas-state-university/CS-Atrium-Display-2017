@@ -1,3 +1,8 @@
+$('div.alert').not('.alert-important').delay(3000).fadeOut(350);
+
+$('div.success').not('.success-important').delay(3000).fadeOut(350);
+
+
 $("#scrollClock").click(function() {
     $('html, body').animate({
         scrollTop: $("#bottom").offset().top

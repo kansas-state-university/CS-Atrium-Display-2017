@@ -9,14 +9,28 @@
 @endsection
 @section('content')
 
+<div class="container"
+<div class="row">
+@if (session()->has('flash_notification.message'))
+    <div class="alert alert-{{ session('flash_notification.level') }}">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+
+        {!! session('flash_notification.message') !!}
+    </div>
+@endif
+</div>
+</div>
+
 <section class="section top">
 <div class="titles">
   <h1>Kansas State University</h1>
   <h2>Computer Science Department</h2>
-  <div class="col-lg-8 col-lg-offset-2">
+  <div class="col-lg-8 col-lg-offset-1">
     <p class="drawing-title">
-      Enter The Drawing
+      Enter The Random Drawing
     </p>
+  </div>
+    <div class="col-lg-8 col-lg-offset-3">
     <p class="typer-title">
       <span class="typer" id="some-id" data-delay="70" data-delim=":" data-words="{{$string}}"
       data-colors="white"></span>
@@ -24,16 +38,13 @@
     </p>
   </div>
 </div>
-
 <div class="container">
   <div class="row text-center">
     <div class="col-lg-4 col-lg-offset-4 col-sm-4 col-sm-offset-2 col-md-6 col-md-offset-3">
-
       <form method="POST" action="{{ url('/add') }}">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <input type="text" name="name" class="form-control name-box" placeholder="Enter your name" autofocus>
-        <div class="row text-center buttons">
-
+        <div class="row  buttons">
           <button class="btn btn-lg btn-filled btn-primary" id="register" disabled="disabled" type="submit">Submit</button>
         </div>
       </form>
@@ -43,21 +54,19 @@
 </section>
 
 
-
 <section class="section bottom" id="bottom">
+  <div class="container">
   <div class="titles">
-    <h1>How They Work</h1>
-    <h2>Random Number Generators</h2>
-    <div class="col-lg-8 col-lg-offset-2">
+    <h1>Random Number Generators</h1>
+    <h2>How Do They Work</h2>
+    <div class="col-lg-8 col-lg-offset-1">
       <p class="drawing-title">
-        Enter the drawing
+
       </p>
-      <p class="typer-title">
-        <span class="typer" id="some-id" data-delay="70" data-delim=":" data-words="{{$string}}"
-        data-colors="white"></span>
-        <span class="cursor" data-cursorDisplay="_" data-owner="some-id"></span>
-      </p>
+
     </div>
+
+  </div>
   </div>
 </section>
 

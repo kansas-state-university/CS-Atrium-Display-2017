@@ -16,15 +16,19 @@ class Controller extends BaseController
 
     public function AddUser(Request $request)
     {
-        $search = strtolower($request->name);
-        $invalid = Blacklist::where('name', $search)->first();
+        $search = explode(" ", strtolower($request->name));
+
+        $invalid = Blacklist::whereIn('name', $search)->first();
+
         if($invalid == null) {
-          User::insert(
-            ['name' => $request->name]
-          );
-          return redirect()->action("Controller@Youtube")->with('success', 'Added user!');
+          $user = new User;
+          $user->name = $request->name;
+          $user->save();
+          flash('You have been added to the database!', 'success');
+          return redirect()->action("Controller@Youtube");
         }
-        return redirect()->action("Controller@Youtube")->withErrors('Invalid name!');
+        flash('Invalid input!', 'danger');
+        return redirect()->action("Controller@Youtube");
       }
 
 
