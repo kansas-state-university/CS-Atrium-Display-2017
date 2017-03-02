@@ -5,9 +5,10 @@ body {
     padding: 0;
     font: normal 16px/20px 'Lekton', sans-serif;
     background-color: #5a2b81;
-    background: url('/img/background.jpg');
-    background-size: contain;
-    background-attachment: fixed;
+    background-image: url('/img/background.jpg');
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-attachment: fixed !important;
 }
 
 h1 {
@@ -32,8 +33,8 @@ h2, h1 {
 
 .name-box {
     color: #ffffff !important;
-
-    width: 365px !important;
+    display: inline-block;
+    width: 365px;
     border: 0;
     background: transparent !important;
     height:50px !important;
@@ -175,6 +176,13 @@ animation-duration:2s;
         margin-left: 0%;
         text-align: center;
     }
+
+    .name-box {
+      width: 365px !important;
+    }
+
+
+
 
 }
 
