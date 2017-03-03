@@ -71,8 +71,6 @@ h2, h1 {
 
 
 .drawing-title {
-    text-align: left;
-    margin-left: 29%;
     margin-top: 13%;
     font-size: 60px;
     color: white;
@@ -80,8 +78,6 @@ h2, h1 {
 }
 
 .typer-title {
-    text-align: left;
-    margin-left: 29%;
     font-size: 60px;
     color: white;
 }
@@ -177,9 +173,6 @@ animation-duration:2s;
         text-align: center;
     }
 
-    .name-box {
-      width: 365px !important;
-    }
 
 
 
