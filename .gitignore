@@ -8,4 +8,6 @@ Homestead.json
 Homestead.yaml
 .env
 *.DS_Store
+/public/*.DS_Store
 /blacklist
+.DS_Store
