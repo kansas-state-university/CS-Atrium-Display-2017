@@ -66,16 +66,17 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="jumbotron faded">
-                    <h1 class="rng">Hello, world!</h1>
-                    <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-                    <p><a href="#" class="btn btn-primary btn-lg" role="button">Learn more</a></p>
+                    <h1 class="rng">Behind the Scenes</h1>
+                    <p>Random number generators often use the system clock to choose their "random" numbers.
+                    These often are not actually random and are instead called "psuedorandom"</p>
                 </div>
             </div>
             <div class="col-md-6 ">
                 <div class="jumbotron faded">
-                    <h1 class="rng">Hello, world!</h1>
-                    <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-                    <p><a href="#" class="btn btn-primary btn-lg" role="button">Learn more</a></p>
+                    <h1 class="rng">Try it out!</h1>
+
+                    <h1 class="counter" id="counter">3,478</h1>
+                    <input type="button" value="Try it" onclick="createCountUp()" class="btn btn-primary btn-lg">
                 </div>
             </div>
         </div>
@@ -92,12 +93,45 @@
 
     @endsection
     @section('footer')
+
+    <script type="text/javascript">
+        var demo, options;
+        options = {
+            useEasing : useEasing, // toggle easing
+            easingFn : easingFn, // defaults to easeOutExpo, but you can specify your own
+            useGrouping : useGrouping, // 1,000,000 vs 1000000
+            separator : ',', // character to use as a separator
+            decimal : '.', // character to use as a decimal
+        };
+
+        // create instance
+        window.onload = function() {
+            // setup CountUp object
+            demo = new CountUp('counter', 0, 94.62, 2, 2.5, options);
+        };
+
+
+        function createCountUp() {
+            var startVal = 0;
+            var max = 10000;
+            var min = 1;
+            var endVal = Math.random() * (max - min) + min;; //rng here
+            var decimals = 0;
+            var duration = 2.5;
+            demo = new CountUp("counter", startVal, endVal, decimals, duration);
+            demo.start();
+        }
+    </script>
+
+
+
+
     <script src="{{ URL::asset('js/jquery.min.js') }}"></script>
     <script src="{{ URL::asset('js/easing.min.js') }}"></script>
     <script src="{{ URL::asset('js/typer.js') }}"></script>
     <script src="{{ URL::asset('js/jquery.mb.YTPlayer.min.js') }}"></script>
     <script src="{{ URL::asset('js/bootstrap.min.js') }}"></script>
     <script src="{{ URL::asset('js/custom.js') }}"></script>
-
+    <script src="{{ URL::asset('js/countUp.js') }}"></script>
 
     @endsection
