@@ -68,7 +68,7 @@
                 <div class="jumbotron faded">
                     <h1 class="rng">Behind the Scenes</h1>
                     <p>Random number generators often use the system clock to choose their "random" numbers.
-                    These often are not actually random and are instead called "psuedorandom"</p>
+                    These numbers are not actually random and are instead called "psuedo random"</p>
                 </div>
             </div>
             <div class="col-md-6 ">
