@@ -13,7 +13,7 @@ if ($db->connect_errno > 0) {
     for($x = 0; $x < 10; $x++)
     {
         $rng = mt_rand() / mt_getrandmax();
-        $lambda = 10 / 6; //per hr
+        $lambda = 2.5; //per hr
 
         $dur = -(log(1 - $rng) / $lambda);
 
