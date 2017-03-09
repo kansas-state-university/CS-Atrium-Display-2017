@@ -20,12 +20,23 @@ class Controller extends BaseController
 
         $invalid = Blacklist::whereIn('name', $search)->first();
 
-        if($invalid == null) {
+
+        if($invalid == null && !ctype_alpha(str_replace(' ', '', $request->name)) === false) {
           $user = new User;
           $user->name = $request->name;
           $user->save();
+
+
+          //redo random logic
+          if(rand(1, 25) == 13) {
+              return view('winner');
+          }
+
+
+
           flash('You have been added to the database!', 'success');
           return redirect()->action("Controller@Youtube");
+
         }
         flash('Invalid input!', 'danger');
         return redirect()->action("Controller@Youtube");

@@ -43,7 +43,7 @@
             <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
                 <form method="POST" action="{{ url('/add') }}">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                    <input type="text" name="name" class="form-control name-box" placeholder="Enter your name" autofocus>
+                    <input type="text" name="name" maxlength="70" class="form-control name-box" placeholder="Enter your name" autofocus>
                     <div class="row  buttons">
                         <button class="btn btn-lg btn-filled btn-primary" id="register" disabled="disabled" type="submit">Submit</button>
                     </div>
