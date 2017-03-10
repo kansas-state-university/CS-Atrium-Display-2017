@@ -1,3 +1,10 @@
+body {
+    background-image: url('/img/background.jpg');
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-attachment: fixed !important;
+}
+
 .fit { /* set relative picture size */
   max-width: 90%;
   max-height: 90%;
@@ -11,6 +18,8 @@
     background-color: rgba(121, 60, 204, 0.6) !important;
     color: white !important;
     width: 150px;
+    border: none !important;
+
 }
 
 a {
