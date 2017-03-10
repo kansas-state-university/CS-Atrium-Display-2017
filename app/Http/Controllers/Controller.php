@@ -70,4 +70,22 @@ class Controller extends BaseController
     }
 
 
+    public function Admin() {
+        $users = User::orderBy('id', 'desc')->paginate(12);
+        //dd($users->previousPageUrl());
+        return view('admin', compact('users'));
+    }
+
+    public function Delete(Request $request) {
+
+        $id= $request->id;
+        if(User::where('id', $id)->delete() == 1) {
+            flash('Name was removed from the database.', 'success');
+            return redirect()->action("Controller@Admin");
+        }
+        flash('Unable to remove name from the database.', 'danger');
+        return redirect()->action("Controller@Admin");
+    }
+
+
 }

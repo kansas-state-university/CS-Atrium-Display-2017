@@ -13,6 +13,9 @@
 
 Route::get('/', 'Controller@Youtube');
 Route::post('/add', 'Controller@AddUser');
+Route::get('/admin', 'Controller@Admin');
+Route::post('/delete/{id}', 'Controller@Delete');
+
 
 Route::get('/test', function() {
     return view('winner');
