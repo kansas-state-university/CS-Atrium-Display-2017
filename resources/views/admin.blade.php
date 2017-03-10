@@ -1,5 +1,5 @@
 @extends('layouts.youtube')
-@section('title', 'Winner')
+@section('title', 'Admin')
 
 @section('head')
 <link href="{{ URL::asset('css/bootstrap.min.css') }}" media="all" rel="stylesheet" type="text/css">
