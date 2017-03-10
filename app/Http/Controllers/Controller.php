@@ -9,6 +9,7 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use App\User;
 use App\Blacklist;
+use App\Number;
 
 class Controller extends BaseController
 {
@@ -26,6 +27,17 @@ class Controller extends BaseController
           $user->name = $request->name;
           $user->save();
 
+
+          date_default_timezone_set('America/Chicago');
+
+          $currTime = date("Y-m-d h:i:s", time());
+
+          $nextTime = Number::first();
+
+          if($currTime > $nextTime->time) {
+              Number::first()->delete();
+              return view('winner');
+          }
 
           //redo random logic
           if(rand(1, 25) == 13) {

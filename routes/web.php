@@ -13,3 +13,7 @@
 
 Route::get('/', 'Controller@Youtube');
 Route::post('/add', 'Controller@AddUser');
+
+Route::get('/test', function() {
+    return view('winner');
+});

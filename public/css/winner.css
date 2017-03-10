@@ -1,0 +1,27 @@
+.fit { /* set relative picture size */
+  max-width: 90%;
+  max-height: 90%;
+}
+.center {
+  display: block;
+  margin: auto;
+}
+
+.btn {
+    background-color: rgba(121, 60, 204, 0.6) !important;
+    color: white !important;
+    width: 150px;
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    color: white;
+}
+
+.btn:hover {
+    background-color: rgba(83, 41, 140, 0.8) !important;
+    color: white !important;
+}

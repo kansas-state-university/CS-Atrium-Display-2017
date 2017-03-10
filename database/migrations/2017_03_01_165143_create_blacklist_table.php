@@ -27,6 +27,6 @@ class CreateBlacklistTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('blacklists');
+        //Schema::dropIfExists('blacklists');
     }
 }
