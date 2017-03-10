@@ -11,14 +11,16 @@ class CreateBlacklistTable extends Migration
      *
      * @return void
      */
-     /*
+
     public function up()
     {
+     /*
       Schema::create('blacklists', function (Blueprint $table) {
           $table->increments('id');
           $table->string('name');
           $table->timestamps();
       });
+      */
     }
 
     /**
@@ -26,9 +28,12 @@ class CreateBlacklistTable extends Migration
      *
      * @return void
      */
-     /*
+
     public function down()
     {
+     /*
         Schema::dropIfExists('blacklists');
-    }*/
+
+        */
+    }
 }
