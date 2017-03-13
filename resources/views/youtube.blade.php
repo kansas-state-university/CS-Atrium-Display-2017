@@ -66,17 +66,21 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="jumbotron faded">
-                    <h1 class="rng">Behind the Scenes</h1>
+                    <h1 class="rng">How it Works</h1>
                     <p>Random number generators often use the system clock to choose their "random" numbers.
                     These numbers are not actually random and are instead called "psuedo random"</p>
                 </div>
             </div>
             <div class="col-md-6 ">
-                <div class="jumbotron faded">
-                    <h1 class="rng">Try it out!</h1>
+                <div class="jumbotron faded text-center">
 
-                    <h1 class="counter" id="counter">3,478</h1>
-                    <input type="button" value="Try it" onclick="createCountUp()" class="btn btn-primary btn-lg">
+                        <h1 class="rng">Try it out!</h1>
+                        <div class="row">
+                        <input type="text"  maxlength="8" placeholder="Min Number" id="startVal" class="low-high " autofocus>
+                        <input type="text"  maxlength="8" placeholder="Max Number" id="endVal" class="low-high " autofocus>
+                    </div>
+                    <h1 class="counter" id="counter">0</h1>
+                    <input type="button" value="Try it" onclick="createCountUp()" class="try-it btn btn-primary btn-lg">
                 </div>
             </div>
         </div>
@@ -112,10 +116,14 @@
 
 
         function createCountUp() {
-            var startVal = 0;
-            var max = 10000;
-            var min = 1;
-            var endVal = Math.random() * (max - min) + min;; //rng here
+            var startVal = document.getElementById("startVal").value;
+            startVal = Number(startVal.replace(',','').replace(' ',''));
+            var endVal = document.getElementById("endVal").value;
+            endVal = Number(endVal.replace(',','').replace(' ',''));
+            //var startVal = 0;
+            //var max = 10000;
+            //var min = 1;
+            var endVal = Math.random() * (endVal - startVal) + startVal;; //rng here
             var decimals = 0;
             var duration = 2.5;
             demo = new CountUp("counter", startVal, endVal, decimals, duration);
