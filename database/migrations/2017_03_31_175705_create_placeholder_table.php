@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateRandomNumbersTable extends Migration
+class CreatePlaceholderTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateRandomNumbersTable extends Migration
      */
     public function up()
     {
-        Schema::create('numbers', function (Blueprint $table) {
+        Schema::create('placeholders', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('time');
+            $table->integer('placeholder')->default(0);
         });
     }
 
@@ -26,6 +26,6 @@ class CreateRandomNumbersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('numbers');
+        Schema::dropIfExists('placeholders');
     }
 }

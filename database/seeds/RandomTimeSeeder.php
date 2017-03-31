@@ -12,12 +12,12 @@ class RandomTimeSeeder extends Seeder
     public function run()
     {
         date_default_timezone_set('America/Chicago');
-        $startDate = strtotime("31 Mar 2017 11:00:00"); //when you want to start the RNG
+        $startDate = 1491062400; //when you want to start the RNG
 
-        for($x = 0; $x < 10; $x++)
+        for($x = 0; $x < 6; $x++)
         {
             $rng = mt_rand() / mt_getrandmax();
-            $lambda = 2.5; //per hr
+            $lambda = 1.5; //per hr
 
             $dur = -(log(1 - $rng) / $lambda);
 
@@ -25,10 +25,10 @@ class RandomTimeSeeder extends Seeder
 
             $dur += $startDate;
 
-            $formatted = date("Y-m-d h:i:s", $dur);
+
 
             DB::table('numbers')->insert([
-              'time' => $formatted
+              'time' => $dur
         	]);
 
 

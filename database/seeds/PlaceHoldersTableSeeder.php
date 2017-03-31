@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class DatabaseSeeder extends Seeder
+class PlaceHoldersTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,7 +11,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-         $this->call(RandomTimeSeeder::class);
-         $this->call(PlaceHoldersTableSeeder::class);
+        DB::table('placeholders')->insert([
+          'placeholder' => 0
+        ]);
     }
 }

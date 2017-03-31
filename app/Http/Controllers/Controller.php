@@ -27,18 +27,18 @@ class Controller extends BaseController
           $user->name = $request->name;
           $user->save();
 
-
           date_default_timezone_set('America/Chicago');
+          $currTime = time();
+          $nextTime = Number::get();
+          $placeHolder = \DB::table('placeholders')->first();
+          $num = $placeHolder->placeholder;
 
-          $currTime = date("Y-m-d h:i:s", time());
-
-          $nextTime = Number::first();
-
-          if($currTime > $nextTime->time) {
-              Number::first()->delete();
+          if($currTime > $nextTime[$num]->time) {
+              $num = $placeHolder->placeholder + 1;
+              \DB::table('placeholders')->where('id', 1)->update(['placeholder' => $num]);
+              $placeHolder1 = \DB::table('placeholders')->first();
               return view('winner');
           }
-
 
           flash('You have been added to the database!', 'success');
           return redirect()->action("Controller@Youtube");
