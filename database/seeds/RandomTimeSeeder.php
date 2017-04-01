@@ -35,5 +35,9 @@ class RandomTimeSeeder extends Seeder
             $startDate = $dur;
             //echo $time;
         }
+
+        DB::table('numbers')->insert([
+            'time' => 2147483647
+        ]);
     }
 }
